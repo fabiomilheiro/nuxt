@@ -23,5 +23,8 @@ const useAnotherButton = computed(() => value.value % 2 != 0);
     <LazyComplexThing v-if="value > 10" />
 
     <SomeClientOnlyCode />
+    <ClientOnly>
+      <Whatever/>
+    </ClientOnly>
   </div>
 </template>
