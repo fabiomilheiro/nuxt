@@ -9,5 +9,5 @@ const onClick = ()=> {
   }
 }
 </script><template>
-  <div>Foo = {{foo}} <Button @click="onClick">Change</Button></div>
+  <div>Foo = {{foo}} <DefaultButton @click="onClick">Change</DefaultButton></div>
 </template>

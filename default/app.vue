@@ -4,6 +4,7 @@
     <Example/>
     <ContentDoc/>
     <NuxtWelcome />
+    <Config/>
   </div>
 </template>
 <script setup lang="ts">

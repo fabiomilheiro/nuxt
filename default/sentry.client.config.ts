@@ -5,7 +5,10 @@ Sentry.init({
     // If set up, you can use your runtime config here
     dsn: useRuntimeConfig().public.sentryDsn,
     //dsn: "https://335037ff2ac3bb61e3407d8a96234e80@o369016.ingest.us.sentry.io/4508189808656384",
-    integrations: [Sentry.replayIntegration()],
+    integrations: [Sentry.replayIntegration({
+        maskAllText: false,
+        blockAllMedia: false,
+    })],
     // Tracing
     // We recommend adjusting this value in production, or using a tracesSampler for finer control.
     tracesSampleRate: 1.0, //  Capture 100% of the transactions
