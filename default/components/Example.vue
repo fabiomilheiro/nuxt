@@ -26,5 +26,6 @@ const useAnotherButton = computed(() => value.value % 2 != 0);
     <ClientOnly>
       <Whatever/>
     </ClientOnly>
+    <Foo />
   </div>
 </template>
