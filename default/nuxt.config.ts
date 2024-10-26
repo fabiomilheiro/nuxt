@@ -8,7 +8,7 @@ export default defineNuxtConfig({
         typeCheck: "build",
     },
 
-    modules: ["@nuxt/eslint"],
+    modules: ["@nuxt/eslint", "@nuxt/content"],
     components: [
         {
             path: "~/components",
