@@ -29,7 +29,7 @@ export default defineNuxtConfig({
         sourceMapsUploadOptions: {
             org: 'fabio-milheiro',
             project: 'nuxt-default',
-            authToken: process.env.SENTRY_AUTH_TOKEN,
+            authToken: process.env.NUXT_SENTRY_AUTH_TOKEN,
 
         },
     },
