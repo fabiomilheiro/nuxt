@@ -12,7 +12,7 @@ const onClick = () => {
 // const defaultButton = resolveComponent("DefaultButton");
 // const anotherButton = resolveComponent("AnotherButton");
 
-const useAnotherButton = computed(() => value.value % 2 == 0);
+const useAnotherButton = computed(() => value.value % 2 != 0);
 
 
 </script>
@@ -21,5 +21,7 @@ const useAnotherButton = computed(() => value.value % 2 == 0);
     <component :is="useAnotherButton ? AnotherButton : DefaultButton" @click="onClick">Increment</component>
 
     <LazyComplexThing v-if="value > 10" />
+
+    <SomeClientOnlyCode />
   </div>
 </template>
