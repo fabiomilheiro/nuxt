@@ -1,4 +1,5 @@
 <script setup lang="ts">
+
 const value = ref(1000);
 
 const onClick = ()=> {
@@ -6,5 +7,5 @@ const onClick = ()=> {
 };
 </script>
 <template>
-  <div>Example component {{ value }} <button @click="onClick">Increment</button></div>
+  <div>Example component {{ value }} <DefaultButton @click="onClick">Increment</DefaultButton></div>
 </template>
