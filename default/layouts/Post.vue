@@ -7,7 +7,9 @@
     </div>
     <main>
       <div style="background-color: gray">
-        <img src="/public/logo.svg" alt="logo"/>
+        <NuxtLink to="/">
+          <img src="/public/logo.svg" alt="logo"/>
+        </NuxtLink>
         <div style="background-color: orange">POST LAYOUT</div>
         <main>
           <slot/>

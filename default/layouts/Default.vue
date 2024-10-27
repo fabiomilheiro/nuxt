@@ -2,8 +2,10 @@
 </script>
 <template>
   <div style="background-color: gray">
-    <img src="/public/logo.svg" alt="logo"/>
-    <div style="background-color: yellow">DEFAULT LAYOUT</div>
+    <NuxtLink to="/">
+      <img src="/public/logo.svg" alt="logo"/>
+    </NuxtLink>
+    <div style="background-color: yellow">DEFAULT LAYOUT (go to <NuxtLink :to="{name: 'admin'}">admin</NuxtLink>)</div>
     <main>
       <slot/>
     </main>

@@ -4,7 +4,9 @@
   <div>
     <div>
       <div style="background-color: gray">
-        <img src="/public/logo.svg" alt="logo"/>
+        <NuxtLink to="/">
+          <img src="/public/logo.svg" alt="logo"/>
+        </NuxtLink>
         <div style="background-color: aqua">CUSTOM LAYOUT</div>
         <main>
           <slot/>
