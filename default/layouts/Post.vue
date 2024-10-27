@@ -3,7 +3,9 @@
 <template>
   <div>
     <div>
-      <slot name="head"></slot>
+      <slot name="head">
+        <title>---{{$route.meta.title}}</title>
+      </slot>
     </div>
     <main>
       <div style="background-color: gray">
