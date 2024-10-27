@@ -17,7 +17,7 @@ export default defineNuxtConfig({
         },
     },
 
-    modules: ["@nuxt/eslint", "@nuxt/content", "@sentry/nuxt/module"],
+    modules: ["@nuxt/eslint", "@nuxt/content", "@sentry/nuxt/module", "@nuxt/image"],
     components: [
         {
             path: "~/components",
