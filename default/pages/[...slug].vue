@@ -1,8 +1,10 @@
 <script setup lang="ts">
-
-</script><template>
+</script>
+<template>
   <div>
-    <ContentDoc />
-    <Example />
+    <ContentDoc>
+      <template #not-found>Content not found.</template>
+    </ContentDoc>
+<!--    <Example />-->
   </div>
 </template>
