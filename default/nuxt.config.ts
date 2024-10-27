@@ -1,7 +1,4 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
-// import dotenv from "dotenv";
-//
-// dotenv.config();
 
 export default defineNuxtConfig({
     compatibilityDate: '2024-04-03',
@@ -14,7 +11,8 @@ export default defineNuxtConfig({
 
     runtimeConfig: {
         public: {
-            sentryDsn: '',// process.env.NUXT_PUBLIC_SENTRY_DSN,
+            environment: '',
+            sentryDsn: '',
         },
     },
 
@@ -25,12 +23,13 @@ export default defineNuxtConfig({
             pathPrefix: false,
         }
     ],
+    sourcemap: {client: true},
     sentry: {
         sourceMapsUploadOptions: {
             org: 'fabio-milheiro',
             project: 'nuxt-default',
             authToken: process.env.NUXT_SENTRY_AUTH_TOKEN,
-
+            enabled: true,
         },
     },
 })

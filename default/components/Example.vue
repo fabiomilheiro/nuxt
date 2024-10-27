@@ -9,7 +9,7 @@ const onClick = () => {
   value.value++;
 
   if (value.value == 10) {
-    throw new Error("Nuxt Button Error");
+    throw new Error("Example Button Error");
   }
 };
 
