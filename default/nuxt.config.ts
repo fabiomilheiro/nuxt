@@ -11,8 +11,9 @@ export default defineNuxtConfig({
 
     runtimeConfig: {
         public: {
-            environment: '',
-            sentryDsn: '',
+            environment: "",
+            sentryDsn: "",
+            tmdbApiToken: "",
         },
     },
 
