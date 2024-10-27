@@ -1,6 +1,9 @@
 <script setup lang="ts">
 definePageMeta({
-  layout: false
+  layout: false,
+  middleware: [
+    "log-test-value",
+  ]
 })
 </script>
 <template>
