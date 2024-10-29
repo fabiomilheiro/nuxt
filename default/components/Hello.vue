@@ -25,7 +25,6 @@ const result = await useFetch<{ value: string }, { data: { message: string; }; }
     }
 );
 
-watch(() => debouncedUrl, v => console.log("v", v))
 </script>
 <template>
   <span>

@@ -2,11 +2,6 @@
 </script>
 <template>
   <div>
-    <div>
-      <slot name="head">
-        <title>---{{$route.meta.title}}</title>
-      </slot>
-    </div>
     <main>
       <div style="background-color: gray">
         <NuxtLink to="/">
