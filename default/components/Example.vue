@@ -24,7 +24,7 @@ const useAnotherButton = computed(() => value.value % 2 != 0);
       <component :is="useAnotherButton ? AnotherButton : DefaultButton" @click="onClick">Increment</component>
       (sensitive info: <span class="sentry-mask">Potentially sensitive</span>)
       <LazyComplexThing v-if="value > 10"/>
-
+      <LocalizationExample/>
       <SomeClientOnlyCode/>
       <ClientOnly>
         <Whatever/>
