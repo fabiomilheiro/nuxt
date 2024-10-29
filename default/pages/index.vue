@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import TsxExample from "~/components/TsxExample.vue";
 </script>
 <template>
   <div>
@@ -7,5 +8,7 @@
     <Meta name="description" content="Home description"/>
     </Html>
     <Example/>
+    <hr>
+    <TsxExample />
   </div>
 </template>
