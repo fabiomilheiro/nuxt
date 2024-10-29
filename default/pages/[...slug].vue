@@ -5,6 +5,5 @@
     <ContentDoc>
       <template #not-found>Content not found.</template>
     </ContentDoc>
-<!--    <Example />-->
   </div>
 </template>

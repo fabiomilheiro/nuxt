@@ -6,5 +6,6 @@
     <Title>Home</Title>
     <Meta name="description" content="Home description"/>
     </Html>
+    <Example/>
   </div>
 </template>
