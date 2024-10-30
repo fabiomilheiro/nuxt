@@ -1,4 +1,15 @@
 <script setup lang="ts">
+useHead({
+  titleTemplate: (title) => {
+    const suffix = "Website name (default template)";
+
+    if (!title) {
+      return `Post - ${suffix}`;
+    }
+
+    return `${title} (Post) - ${suffix}`;
+  }
+});
 </script>
 <template>
   <div>

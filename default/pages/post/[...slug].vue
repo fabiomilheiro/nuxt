@@ -5,6 +5,12 @@ definePageMeta({
 });
 
 const route = useRoute();
+
+
+useSeoMeta({
+  title: `Post: ${route.params.slug?.[0]}` ?? "",
+})
+
 </script>
 <template>
   <div>

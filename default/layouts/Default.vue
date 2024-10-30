@@ -1,5 +1,15 @@
 <script setup lang="ts">
 import Hello from "~/components/Hello.vue";
+
+useHead({
+  titleTemplate: (title) => {
+    if (!title) {
+      return "Website name (default template)";
+    }
+
+    return `${title} - Website name (default template)`;
+  }
+});
 </script>
 <template>
   <div style="background-color: gray">
@@ -12,7 +22,7 @@ import Hello from "~/components/Hello.vue";
       <NuxtLink :to="{name: 'movies'}">movies</NuxtLink>
       )
       |
-      <Hello />
+      <Hello/>
     </div>
     <main>
       <slot/>
