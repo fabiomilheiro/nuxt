@@ -18,13 +18,18 @@ export default defineNuxtConfig({
         },
     },
 
-    modules: ["@nuxt/eslint", "@nuxt/content", "@sentry/nuxt/module", "@nuxt/image"],
+    modules: ["@nuxt/eslint", "@nuxt/content", "@sentry/nuxt/module", "@nuxt/image", "@pinia/nuxt"],
     components: [
         {
             path: "~/components",
             pathPrefix: false,
         }
     ],
+
+    app: {
+        pageTransition: {name: "page", mode: "out-in"},
+        layoutTransition: {name: "layout", mode: "out-in"},
+    },
     sourcemap: {client: true},
     sentry: {
         sourceMapsUploadOptions: {
