@@ -40,6 +40,11 @@ export default defineNuxtConfig({
         pageTransition: {name: "page", mode: "out-in"},
         layoutTransition: {name: "layout", mode: "out-in"},
     },
+    ui: {
+        theme: {
+            colors: ['primary', 'secondary', 'info', 'success', 'warning', 'error'],
+        }
+    },
     sourcemap: {client: true},
     sentry: {
         sourceMapsUploadOptions: {

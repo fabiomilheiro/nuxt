@@ -1,5 +1,9 @@
 export default defineAppConfig({
-  theme: {
-      primaryColor: "blue",
+  ui: {
+      colors: {
+          primary: "blue",
+          secondary: "fuchsia",
+          warning: "yellow",
+      }
   }
 });
