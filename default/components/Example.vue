@@ -1,7 +1,7 @@
 <script setup lang="ts">
 
 
-import {AnotherButton, DefaultButton} from "#components";
+import {AnotherButton, DefaultButton, UButton} from "#components";
 
 const value = ref(0);
 
@@ -21,7 +21,7 @@ const useAnotherButton = computed(() => value.value % 2 != 0);
 <template>
   <NuxtErrorBoundary>
     <div>Example component {{ value }}
-      <component :is="useAnotherButton ? AnotherButton : DefaultButton" @click="onClick">Increment</component>
+      <component :is="useAnotherButton ? AnotherButton : UButton" @click="onClick">Increment</component>
       (sensitive info: <span class="sentry-mask">Potentially sensitive</span>)
       <GlobalCount />
       <PiniaExample/>

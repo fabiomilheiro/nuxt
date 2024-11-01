@@ -7,13 +7,16 @@
 // <Config/>
 </script>
 <template>
-  <div>
+  <UApp>
     <NuxtLayout>
       <NuxtPage/>
     </NuxtLayout>
-  </div>
+  </UApp>
 </template>
 <style>
+@import "tailwindcss";
+@import "@nuxt/ui";
+
 .page-enter-active,
 .page-leave-active {
   transition: ease-in-out 0.4s;
