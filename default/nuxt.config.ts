@@ -15,17 +15,27 @@ export default defineNuxtConfig({
             environment: "",
             sentryDsn: "",
             tmdbApiToken: "",
+            motion: {
+                directives: {},
+            }
         },
     },
 
-    modules: ["@nuxt/eslint", "@nuxt/content", "@sentry/nuxt/module", "@nuxt/image", "@pinia/nuxt", "@nuxt/ui"],
+    modules: [
+        "@nuxt/eslint",
+        "@nuxt/content",
+        "@sentry/nuxt/module",
+        "@nuxt/image",
+        "@pinia/nuxt",
+        "@nuxt/ui",
+        "@vueuse/motion/nuxt",
+    ],
     components: [
         {
             path: "~/components",
             pathPrefix: false,
         }
     ],
-
     app: {
         pageTransition: {name: "page", mode: "out-in"},
         layoutTransition: {name: "layout", mode: "out-in"},

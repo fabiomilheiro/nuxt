@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import PiniaExampleList from "~/components/PiniaExampleList.vue";
+
 const listStore = useListStore();
 const newValue = ref("");
 </script>
@@ -9,9 +11,7 @@ const newValue = ref("");
       <label for="new-value">New value</label>
       <input v-model="newValue" id="new-value"/>
       <DefaultButton @click="()=> listStore.add(newValue)">Submit</DefaultButton>
-      <ul>
-        <li v-for="v of listStore.list" :key="v">{{ v }}</li>
-      </ul>
+      <PiniaExampleList />
     </div>
   </div>
 </template>
