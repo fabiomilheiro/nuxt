@@ -12,11 +12,14 @@ useHead({
 });
 </script>
 <template>
-  <div style="background-color: gray">
-    <NuxtLink to="/">
-      <img src="/public/logo.svg" alt="logo"/>
-    </NuxtLink>
-    <div style="background-color: yellow">DEFAULT LAYOUT (
+  <div>
+    <header class="flex">
+      <NuxtLink to="/" class="grow">
+        <img src="/public/logo.svg" alt="logo"/>
+      </NuxtLink>
+      <ColorModeSelector />
+    </header>
+    <div class="bg-yellow-400 dark:bg-yellow-600">DEFAULT LAYOUT (
       <NuxtLink :to="{name: 'admin'}">admin</NuxtLink>
       |
       <NuxtLink :to="{name: 'movies'}">movies</NuxtLink>

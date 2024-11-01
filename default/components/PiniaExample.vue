@@ -7,10 +7,10 @@ const newValue = ref("");
 <template>
   <div>
     <h2>Pinia store example</h2>
-    <div>
+    <div class="space-x-2">
       <label for="new-value">New value</label>
-      <input v-model="newValue" id="new-value"/>
-      <DefaultButton @click="()=> listStore.add(newValue)">Submit</DefaultButton>
+      <UInput v-model="newValue" id="new-value"/>
+      <UButton @click="()=> listStore.add(newValue)">Submit</UButton>
       <PiniaExampleList />
     </div>
   </div>

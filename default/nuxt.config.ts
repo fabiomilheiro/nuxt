@@ -45,6 +45,9 @@ export default defineNuxtConfig({
             colors: ['primary', 'secondary', 'info', 'success', 'warning', 'error'],
         }
     },
+    colorMode: {
+        preference: "light",
+    },
     sourcemap: {client: true},
     sentry: {
         sourceMapsUploadOptions: {

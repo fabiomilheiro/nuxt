@@ -34,10 +34,9 @@ const movies = await useFetch<ListMoveResponse>(
 <template>
   <div style="margin-bottom:5rem;">
     <h1>Movies</h1>
-    <div>
-      <label for="search-text">Search:</label>
-      <input id="search-text" v-model="searchText"/>
-    </div>
+    <UFormField label="Search" name="search">
+      <UInput v-model="searchText" />
+    </UFormField>
     <ul>
       <li v-for="result of movies.data.value?.results" :key="result.id">
         <NuxtImg :src="`https://media.themoviedb.org/t/p/w50_and_h50_face${result.backdrop_path}`" width="50" height="50"/>

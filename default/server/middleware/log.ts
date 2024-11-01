@@ -1,3 +1,3 @@
 export default defineEventHandler((event)=>{
-    console.log("URL: ", event.node.req.url);
+    console.log("Log middleware: URL = ", event.node.req.url);
 });

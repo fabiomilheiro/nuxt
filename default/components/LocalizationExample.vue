@@ -8,12 +8,8 @@ const date = ref(new Date(2001, 1, 1));
 const formattedDate = useLocaleDate(date);
 </script>
 <template>
-  <div>
-    <select v-model="locale">
-      <option v-for="l of locales" :key="l">
-        {{l}}
-      </option>
-    </select>
+  <div class="flex gap-2 my-2">
+    <USelect v-model="locale" :items="locales" />
     <span>Formatted date: </span>
     <span>{{formattedDate}}</span>
   </div>

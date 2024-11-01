@@ -1,10 +1,9 @@
 <script setup lang="ts">
 </script>
 <template>
-  <div>
-    Layouts:
-    <button @click="setPageLayout('default')">Default</button>
-    <button @click="setPageLayout('post')">Post</button>
-    <button @click="setPageLayout(false)">None</button>
+  <div class="flex my-2 gap-2">
+    <UButton @click="setPageLayout('default')">Default</UButton>
+    <UButton @click="setPageLayout('post')">Post</UButton>
+    <UButton @click="setPageLayout(false)">None</UButton>
   </div>
 </template>
