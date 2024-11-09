@@ -19,17 +19,27 @@ export default defineNuxtConfig({
                 directives: {},
             }
         },
+        mongodbConnectionString: "",
     },
 
     modules: [
-        "@nuxt/eslint",
-        "@nuxt/content",
-        "@sentry/nuxt/module",
-        "@nuxt/image",
-        "@pinia/nuxt",
-        "@nuxt/ui",
-        "@vueuse/motion/nuxt",
+      "@nuxt/eslint",
+      "@nuxt/content",
+      "@sentry/nuxt/module",
+      "@nuxt/image",
+      "@pinia/nuxt",
+      "@nuxt/ui",
+      "@vueuse/motion/nuxt",
+      "nuxt-mongoose",
     ],
+    mongoose: {
+        uri: process.env.NUXT_MONGODB_CONNECTION_STRING,
+        options: {
+
+        },
+        modelsDir: 'models',
+        devtools: true,
+    },
     components: [
         {
             path: "~/components",

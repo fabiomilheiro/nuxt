@@ -6,17 +6,20 @@ const config = useRuntimeConfig();
 
 const searchText = ref("");
 
-interface ListMoveResponse {
-  results: Movie[];
-}
+type ListMoveResponse = Movie[];
 
 interface Movie {
-  id: number;
+  _id: string;
   title: string;
-  backdrop_path: string;
+  numberInStock: number;
+  dailyRentalRate: number;
+  genre: {
+    _id: string;
+    name: string;
+  }
 }
 
-const url = computed(() => `https://api.themoviedb.org/3/search/movie?query=${searchText.value}&include_adult=false&language=en-GB&page=1`);
+const url = computed(() => `/api/movies?searchText=${searchText.value}`);
 
 const debouncedUrl = useDebounce(url, 400);
 
@@ -25,7 +28,7 @@ const movies = await useFetch<ListMoveResponse>(
     {
       headers: {
         accept: "application/json",
-        "Authorization": `Bearer ${config.public.tmdbApiToken}`,
+        // "Authorization": `Bearer ${config.public.tmdbApiToken}`,
       }
     },
 );
@@ -37,9 +40,15 @@ const movies = await useFetch<ListMoveResponse>(
     <UFormField label="Search" name="search">
       <UInput v-model="searchText" />
     </UFormField>
+    <p v-if="movies.status.value == 'pending'">
+      Loading...
+    </p>
+    <p v-if="movies.status.value == 'success' && movies.data.value?.length == 0">
+      No results
+    </p>
     <ul>
-      <li v-for="result of movies.data.value?.results" :key="result.id">
-        <NuxtImg :src="`https://media.themoviedb.org/t/p/w50_and_h50_face${result.backdrop_path}`" width="50" height="50"/>
+      <li v-for="result of movies.data.value" :key="result._id">
+<!--        <NuxtImg :src="`https://media.themoviedb.org/t/p/w50_and_h50_face${result.backdrop_path}`" width="50" height="50"/>-->
         {{ result.title }}
       </li>
     </ul>
